@@ -1,0 +1,162 @@
+/*===========================Page realisation=========================*/
+/*Carrousel principal (Auto avec js)*/
+.carousel-container-principal{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background-color: #333;
+}
+
+.carousel-image-principal{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image-principal img{
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+    height: 400px;
+    display: block;
+}
+
+/* Dots */
+.carousel-dots-principal{
+    text-align: center;
+    padding: 12px 0;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-dots-principal .dot{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:  all 0.3s ease;
+}
+
+.carousel-dots-principal .dot.active{
+    background-color: rgb(212, 175, 55);
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* Conteneur des projets*/
+.carousel-container-principal-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Chaque projet*/
+.projet{
+    width: 45%;
+    min-width: 280px;
+    background-color: rgb(0,100,70);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.projet:hover{
+    transform: translateY(-5px);
+}
+.projet h3{
+    text-align: center;
+    color: rgb(212, 175, 55);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.projet p{
+    text-align: center;
+    color: #cfe496;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/*Mini carrousels (Manuels avec Boutons)*/
+.mini-carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.mini-carousel-images{
+    overflow: hidden;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.mini-carousel-images .slides{
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.mini-carousel-images .slides img{
+    width: 100%;
+    flex-shrink: 0;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.mini-prev, .mini-next{
+    background-color: rgb(212, 175, 55);
+    color: rgb(0,100,70);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:  all 0.3s ease;
+}
+
+.mini-prev:hover, .mini-next:hover{
+    background-color: white;
+    transform: scale(1.1);
+}
+
+/*=========================Responsive=========================*/
+@media(max-width:768){
+    #haut{
+        flex-direction: column;
+        text-align: center;
+    }
+    #haut nav ul{
+        padding: 0;
+    }
+
+    .carousel-image-principal img{
+        height: 250px;
+    }
+    .projet{
+        width: 100%;
+    }
+    .mini-carousel-images .slides img{
+        height: 140px;
+    }
+    .entreprise-div{
+        width: 100%;
+    }
+    .info-block{
+        width: 100%;
+    }
+}

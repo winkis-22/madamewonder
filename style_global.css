@@ -1,0 +1,336 @@
+/* =================================== Style Généraux ==============================*/
+
+body{
+    background-color: #d8d8d8;
+    color: rgb(216,205,144);
+}
+
+#haut{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: /*rgb(0,100,70)*/ rgb(212,175,55);
+    margin: 8px;
+    padding: 8px;
+    flex-wrap: wrap;
+}
+
+#haut nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#haut nav ul li a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    color: rgb(0,100,70);
+}
+
+#haut nav ul li a:hover{
+    color: rgb(253,12,12);
+}
+#corps{
+    background-color: rgb( 216, 216, 216);
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 20px;
+}
+
+/*=================================== Page Acceuil ===================================*/
+#intro{
+    color: rgb(0,100,70);
+}
+#intro p{
+    text-align: justify;
+}
+
+/* Carrousel acceuil (Auto)*/ /*==============================Inutiliser=========================*/
+.carousel{
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.carousel-image{
+    display: flex;
+    animation: carouselAnimation 9s infinite linear;
+    width: 100%;
+}
+
+.carousel-image img{
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
+    height: 400px;
+    display: block;
+}
+
+@keyframes carouselAnimation{
+    0%, 30% {
+        transform: translateX(0);
+    }
+    33.33%, 63.33%{
+        transform: translateX(-100%);
+    }
+    66.66%, 96.66%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* Entreprise acceuil */
+#entreprise-block{
+    background-color: rgb(216, 216, 216);
+    border: 2px solid  rgb(212, 175, 55);
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+}
+#entreprise-block h2{
+    text-align: center;
+    color: rgb(109, 109, 109);
+}
+#entreprise-carte{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    margin: 8px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.entreprise-div{
+    width: 35%;
+    min-width: 280px;
+    background-color: rgb(0, 100, 70);
+    border-radius: 16px;
+    padding: 15px;
+}
+.entreprise-div h3{
+    text-align: center;
+    color: #cfe496;
+}
+.entreprise-div p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+/*============================================Menu HAMBURGER=================================*/
+/*cacher le checkbox*/
+.hamburger-checkbox{
+    display: none;
+}
+/*style du bouton humbergeur*/
+.hamburger-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: auto;/*aligne à droite*/
+    padding: 16px;
+    padding-right: 16px;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    background: #0aac5b;
+    border-radius: 2px;
+}
+/*cacher le menu par defaut*/
+.nav-menu{
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    width: 300px;
+    background: rgb(13, 190, 57);
+    z-index: 1000;
+    margin-right: 82px;
+}
+/* afficher le menu quand le checkbox est cochée*/
+.hamburger-checkbox:checked ~ .nav-menu{
+    display: block;
+}
+/* transformer le burgeur en croix*/
+.hamburger-button .bar{
+    transition: transform 0.3s,opacity 0.3s;
+}
+.hamburger-checkbox:checked + .hamburger-button .bar:nth-child(1){
+    transform: rotate(45deg) translate(5px,5px);
+}
+.hamburger-checkbox:checked + .hamburger-button .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger-checkbox:checked + .hamburger-button .bar:nth-child(3){
+    transform: rotate(-45deg) translate(5px,-5px);
+}
+
+/*==================== BOUTONS ===================*/
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 8px;
+}
+
+.button button{
+    height: 40px;
+    border-radius: 12px;
+    background-color: rgb(212, 175, 55);
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: transform 1.2s;
+    transition-delay: 0.5s;
+}
+
+.button button:hover{
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.2);
+}
+.button button:active{
+    background-color: rgb(21, 255, 40);
+    transform: rotate(20deg);
+}
+.button button a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.realisation-link-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.realisation-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgb(212,175,55), rgb(0,100,70));
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.realisation-btn:hover{
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgb(0,100,70), rgb(212,175,55));
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/*====================Footer==============================*/
+#pied{
+    border: 2px solid  rgb(212, 175, 55);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+}
+#info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.info-block{
+    width: 45%;
+    background-color: beige;
+    color: rgb(49, 49, 48);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.info-block h3{
+    text-align: center;
+}
+
+
+/*=========================Responsive=========================*/
+
+@media(max-width:768px){
+    #haut{
+        flex-direction: column;
+        text-align: center;
+    }
+    /* Ajustement du menu*/
+    .hamburger-button{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .nav-menu{
+        top: 80px;
+        right: 20px;
+        width: 100px;
+        margin-right: 0;
+    }
+
+    .nav-menu ul{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-menu ul li a{
+        color: white;
+        font-size: 18px;
+    }
+    .carousel-image img, .carousel-image-principal img{
+        height: 250px;
+    }
+    .projet{
+        width: 100%;
+    }
+    .mini-carousel-images img{
+        height: 140px;
+    }
+    .entreprise-div, .info-block{
+        width: 100%;
+    }
+
+    .realisation-btn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    /* Ajustement dees formulaires*/
+    .div-form{
+        flex-direction: column;
+        align-self: flex-start;
+    }
+
+    .div-form label{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .div-form input,
+    .div-form select{
+        width: 100%;
+    }
+
+    /* Faq en colonne*/
+    #groupe{
+        flex-direction: column;
+    }
+
+    .faq{
+        width: 100%;
+    }
+}

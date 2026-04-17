@@ -1,0 +1,344 @@
+/* ============================================
+   RESPONSIVE.CSS - Règles pour tout le site
+   ============================================ */
+
+/* Tablettes et petits écrans (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Header */
+    #haut {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    #haut nav ul {
+        justify-content: center;
+        padding-top: 4px;
+    }
+    
+    /* Corps principal */
+    #corps {
+        padding: 15px;
+    }
+}
+
+/* Mobiles et tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+    
+    /* ========== HEADER ========== */
+    #haut h1 {
+        font-size: 1.5rem;
+    }
+    
+    #haut nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 4px;
+    }
+    
+    #haut nav ul li a {
+        font-size: 14px;
+    }
+    
+    /* ========== PAGE ACCUEIL ========== */
+    /* Carrousel accueil */
+    .carousel-image img {
+        height: 250px;
+    }
+    
+    /* Introduction */
+    #intro h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    #intro p {
+        font-size: 14px;
+    }
+    
+    /* Entreprises */
+    .entreprise-div {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .entreprise-div h3 {
+        font-size: 1.2rem;
+    }
+    
+    .entreprise-div p {
+        font-size: 14px;
+    }
+    
+    /* ========== PAGE FAQ / FORMULAIRES ========== */
+    /* FAQ */
+    #groupe {
+        flex-direction: column;
+    }
+    
+    .faq {
+        width: 100%;
+        margin: 8px 0;
+    }
+    
+    .faq h3 {
+        font-size: 14px;
+    }
+    
+    /* Formulaires */
+    #formulaire {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form {
+        width: 100%;
+        min-width: auto;
+        margin: 10px 0;
+    }
+    
+    form h2 {
+        font-size: 1.2rem;
+    }
+    
+    .div-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .div-form label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    
+    .div-form input,
+    .div-form select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* ========== PAGE RÉALISATIONS ========== */
+    /* Carrousel principal */
+    .carousel-image-principal img {
+        height: 250px;
+    }
+    
+    .carousel-container-principal {
+        margin-bottom: 20px;
+    }
+    
+    /* Projets */
+    .carousel-container-principal-2 {
+        gap: 15px;
+    }
+    
+    .projet {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .projet h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Mini-carrousels */
+    .mini-carousel {
+        gap: 8px;
+        padding: 8px;
+    }
+    
+    .mini-carousel-images {
+        width: 75%;
+    }
+    
+    .mini-carousel-images .slides img {
+        height: 140px;
+    }
+    
+    .mini-prev, .mini-next {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    /* ========== FOOTER ========== */
+    #info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info-block {
+        width: 100%;
+        min-width: auto;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .info-block ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    
+    .info-block button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Petits mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+    
+    /* Header */
+    #haut h1 {
+        font-size: 1.2rem;
+    }
+    
+    #haut nav ul {
+        gap: 10px;
+    }
+    
+    #haut nav ul li a {
+        font-size: 12px;
+    }
+    
+    /* Corps */
+    #corps {
+        padding: 10px;
+        margin: 5px;
+    }
+    
+    /* ========== PAGE ACCUEIL ========== */
+    .carousel-image img {
+        height: 200px;
+    }
+    
+    #intro h2 {
+        font-size: 1.2rem;
+    }
+    
+    .entreprise-div {
+        padding: 10px;
+    }
+    
+    .entreprise-div h3 {
+        font-size: 1rem;
+    }
+    
+    .button button {
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    /* ========== PAGE RÉALISATIONS ========== */
+    .carousel-image-principal img {
+        height: 200px;
+    }
+    
+    .projet {
+        padding: 10px;
+    }
+    
+    .projet h3 {
+        font-size: 1rem;
+    }
+    
+    .projet p {
+        font-size: 12px;
+    }
+    
+    .mini-carousel-images {
+        width: 70%;
+    }
+    
+    .mini-carousel-images .slides img {
+        height: 120px;
+    }
+    
+    .mini-prev, .mini-next {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+    
+    /* ========== PAGE FAQ ========== */
+    .faq {
+        padding: 8px;
+    }
+    
+    .faq summary {
+        font-size: 12px;
+    }
+    
+    .faq p {
+        font-size: 11px;
+        padding-left: 10px;
+    }
+    
+    /* Formulaires */
+    form {
+        padding: 10px;
+    }
+    
+    form h2 {
+        font-size: 1rem;
+    }
+    
+    form p {
+        font-size: 12px;
+    }
+    
+    .div-form input,
+    .div-form select {
+        padding: 6px;
+    }
+    
+    .button-form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* Footer */
+    .info-block h3 {
+        font-size: 1rem;
+    }
+    
+    .info-block ul li {
+        font-size: 12px;
+    }
+}
+
+/* Orientation paysage sur mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .carousel-image img,
+    .carousel-image-principal img {
+        height: 180px;
+    }
+    
+    .mini-carousel-images .slides img {
+        height: 100px;
+    }
+    
+    .projet {
+        width: 100%;
+    }
+}
+
+/* Écrans très larges (min-width: 1400px) */
+@media (min-width: 1400px) {
+    .carousel,
+    .carousel-container-principal {
+        max-width: 1200px;
+    }
+    
+    .carousel-image img,
+    .carousel-image-principal img {
+        height: 500px;
+    }
+    
+    .projet {
+        width: 30%;
+    }
+}
